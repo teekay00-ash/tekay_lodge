@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    });
+    navLinks.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+});
+
+</script>
+
+  <style>
+  /* Base Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+nav ul {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Include Navbar -->
+  <nav>
+    <div class="nav-logo">Lodge Website</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+  <br>
+  <br>
+
+  <!-- Contact Info -->
+  <section class="contact-info">
+    <h2>Contact Us</h2>
+    <p>Phone: (+263) 778891251</p>
+    <p>Address: 123 Hatfield, Somewhere, Harare</p>
+    <div id="map" style="height: 300px; width: 100%;"></div>
+    <p>Hours: Mon-Sat: 9 AM - 10 PM | Sun: 10 AM - 8 PM</p>
+  </section>
+
+  <!-- Comment Section -->
+  <section class="comments">
+    <h2>Leave a Comment</h2>
+    <form>
+      <textarea name="comment" rows="5" placeholder="Write your comment here"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- FAQs -->
+  <section class="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What services do you provide?</h3>
+      <p>We provide lodging, fine dining, and event hosting.</p>
+    </div>
+    <div class="faq">
+      <h3>How can I make a reservation?</h3>
+      <p>You can book online or call us at (123) 456-7890.</p>
+    </div>
+  </section>
+
+  <!-- Live Chat -->
+  <section class="live-chat">
+    <h2>Live Chat</h2>
+    <p>Click <a href="#">here</a> to chat with a support agent.</p>
+  </section>
+
+  <script>
+    // Google Maps integration (Add your API Key)
+    function initMap() {
+      var lodgeLocation = { lat: -25.344, lng: 131.036 };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: lodgeLocation,
+      });
+      var marker = new google.maps.Marker({
+        position: lodgeLocation,
+        map: map,
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

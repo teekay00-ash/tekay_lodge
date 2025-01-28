@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    });
+    navLinks.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+});
+
+</script>
+
+<style>
+  /* Base Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+nav ul {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+  
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+    }
+  
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  
+    .hero-text p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+  
+    .btn:hover {
+      background-color: #218838;
+    }
+  .image-container{
+    margin-right: 10px;
+  }
+  .overlay{
+    color: orangered;
+  }
+  
+</style>
+</head>
+<body>
+  <!-- Include Navbar -->
+  <nav>
+    <div class="logo">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 20px; font-weight: bold;">
+            Teekay Lodge
+        </a>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+ <!-- Hero Section -->
+<section class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="images/lodge.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+      <h1>Welcome to the Lodge</h1>
+      <p>Experience comfort and luxury in our world-class lodge.</p>
+      <a href="services.html" class="btn">Explore Our Services and Tell Us</a>
+    </div>
+  </section>
+  
+
+  <!-- Menu Highlights -->
+  <!-- Menu Highlights -->
+<section class="menu-highlights">
+    <h2>Our Menu Highlights</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <div class="image-container">
+                <img src="images/dishes.jpg" alt="Dish 1">
+                <div class="overlay">
+                    <p style="color: orangered;">Our signature dish is crafted with love and locally sourced ingredients for a delightful experience.</p>
+                </div>
+            </div>
+            <p>Signature Dish</p>
+        </div>
+        <div class="menu-item">
+            <div class="image-container">
+                <img src="images/l0.jpg" alt="Dish 2">
+                <div class="overlay">
+                    <p style="color: orangered;">Find your peaceful retreat. Our lodge offers stunning views and unforgettable moments.</p>
+                </div>
+            </div>
+            <p>Experience Outlooking View</p>
+        </div>
+        <div class="menu-item">
+            <div class="image-container">
+                <img src="images/horse (8).jpg" alt="Dish 3">
+                <div class="overlay">
+                    <p style="color: orangered;">Nature's haven awaits. Relax, recharge, and soak in the beauty at our lodge.</p>
+                </div>
+            </div>
+            <p>Escape to serenity</p>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Social Icons -->
+  <footer>
+    <div class="footer-content">
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="mailto:chirokototanaka@811gmail.com" class="fa fa-envelope" aria-label="Email"></a>
+
+            <a href="https://facebook.com/tanaka.chirokoto" class="fa fa-facebook" aria-label="Facebook" target="_blank"></a>
+            <a href="https://twitter.com/tanaka.chirokoto" class="fa fa-twitter" aria-label="Twitter" target="_blank"></a>
+            <a href="https://instagram.com/tanaka.chirokoto" class="fa fa-instagram" aria-label="Instagram" target="_blank"></a>
+            <a href="https://linkedin.com/in/tanaka chirokoto" class="fa fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+          </div>
+        <p>&copy; 2025 Teekay Restaurant . All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

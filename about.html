@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Our Restaurant</title>
+    <style>
+        /* About Page Styles */
+
+/* Story Section */
+.story {
+  padding: 40px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.story h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.story p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Chef's Profile */
+.chef-profile {
+  display: flex;
+  padding: 40px;
+  background-color: #fff;
+  align-items: center;
+}
+
+.chef-profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Team Members */
+.team {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Awards Section */
+.awards {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.awards ul {
+  list-style: none;
+}
+
+.awards li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Newsletter Signup */
+.newsletter {
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newsletter form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+}
+
+.newsletter form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.newsletter form button:hover {
+  background-color: #cc7a00;
+}
+/* Navigation Bar Styling */
+/* Base Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    margin-right: 29px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/*footer*/
+ /* Footer Styling */
+ footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it doesn't overlap other content */
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff; /* Light blue on hover */
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenu = document.getElementById("mobile-menu");
+            const navLinks = document.querySelector(".nav-links");
+    
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none; font-size: 20px; font-weight: bold;">
+                Teekay Lodge
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Story of the Restaurant -->
+    <section class="story">
+        <h1>Our Story</h1>
+        <p>
+            Welcome to Our Restaurant, where passion for food meets exceptional service. Established in 2005, we’ve been
+            dedicated to creating unforgettable dining experiences with locally sourced ingredients and a touch of love
+            in every dish.
+        </p>
+    </section>
+
+    <!-- Chef's Profile -->
+    <section class="chef-profile">
+        <h2>Meet Our Chef</h2>
+        <div class="chef">
+            <img src="images/chef.jpg" alt="Chef Profile">
+            <div>
+                <h3>Chef Tanaka A. Chi</h3>
+                <p>
+                    With over 20 years of culinary expertise, Chef Tanaka brings creativity and innovation to every dish.
+                    His philosophy is simple: use the best ingredients and let their flavors shine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members -->
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="images/chef1 (1).jpg" alt="Staff Member">
+            <div>
+                <h3>Teekay Chi</h3>
+                <p>Role: General Manager</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="images/chef1 (2).jpg" alt="Staff Member">
+            <div>
+                <h3>Mkay Zero</h3>
+                <p>Role: Sous Chef</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards and Recognition -->
+    <section class="awards">
+        <h2>Awards & Recognition</h2>
+        <ul>
+            <li>Best Local Restaurant - City Magazine, 2020</li>
+            <li>Top 10 Restaurants for Sustainability - Green Dining Awards, 2021</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <img src="images/test.jpg" alt="Customer">
+            <p>"The food and service are absolutely amazing! Highly recommended!" -Tanaka C .</p>
+        </div>
+        <div class="testimonial">
+            <img src="images/test2.jpg" alt="Customer">
+            <p>"A hidden gem with an exceptional atmosphere. Loved the experience!" - Emily R.</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Sign up for our newsletter to receive the latest updates, promotions, and event invitations.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer with Social Icons -->
+    
+    <footer>
+        <div class="footer-content">
+            <p>Follow us on:</p>
+            <div class="social-icons">
+                <a href="mailto:chirokototanaka@811gmail.com" class="fa fa-envelope" aria-label="Email"></a>
+    
+                <a href="https://facebook.com/tanaka.chirokoto" class="fa fa-facebook" aria-label="Facebook" target="_blank"></a>
+                <a href="https://twitter.com/tanaka.chirokoto" class="fa fa-twitter" aria-label="Twitter" target="_blank"></a>
+                <a href="https://instagram.com/tanaka.chirokoto" class="fa fa-instagram" aria-label="Instagram" target="_blank"></a>
+                <a href="https://linkedin.com/in/tanaka chirokoto" class="fa fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              </div>
+            <p>&copy; 2025 Teekay Restaurant . All rights reserved.</p>
+        </div>
+            <p>&copy Teekay; 2025 . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

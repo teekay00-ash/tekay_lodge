@@ -1,0 +1,401 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  
+  .nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ff9900;
+  }
+  
+  /* Hamburger Menu (for mobile) */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-text .btn:hover {
+    background-color: #cc7a00;
+  }
+  
+  /* Social Icons */
+  footer.social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #222;
+  }
+  
+  footer.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  footer.social-icons a:hover {
+    color: #ff9900;
+  }
+  
+  /* Contact Page */
+  .contact-info, .comments, .faqs, .live-chat {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h2,
+  .comments h2,
+  .faqs h2,
+  .live-chat h2 {
+    margin-bottom: 15px;
+  }
+  
+  .comments form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .comments form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comments form button:hover {
+    background-color: #cc7a00;
+  }
+  
+  .faq {
+    margin-bottom: 15px;
+  }
+  
+  .faq h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .faq p {
+    font-size: 16px;
+  }
+  
+  /* About Page */
+  .about-section, .testimonials, .team, .newsletter, .story {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonials img, .team img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .testimonials div, .team div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .newsletter form input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .newsletter form button {
+    width: 25%;
+    padding: 10px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .newsletter form button:hover {
+    background-color: #cc7a00;
+  }
+
+
+  /*home page*/
+  /* Menu Highlights Section */
+.menu-highlights {
+    padding: 40px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.menu-highlights h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.menu-item {
+    position: relative;
+    width: 400px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for images */
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+/* Overlay for the story */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Hover Effects */
+.image-container:hover {
+    transform: scale(1.05); /* Slightly enlarge the container */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Slightly zoom in on the image */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show the overlay */
+}
+
+.menu-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 300px; /* Limit the width of menu items */
+    }
+}
+/*footer home pge*/
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it doesn't overlap other content */
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff; /* Light blue on hover */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 5px;
+    }
+}

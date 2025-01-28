@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Lodge Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+   /*nav*/
+   /* Base Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
+    .container {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    .activity {
+      text-align: center;
+    }
+
+    .activity img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .activity label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+    }
+    /* Footer Styling */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure it doesn't overlap other content */
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff; /* Light blue on hover */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 5px;
+    }
+}
+  .nav-links{
+    margin-right: 15px;
+  }
+  </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      mobileMenu.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+      });
+  });
+</script>
+
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 20px; font-weight: bold;">
+          Teekay Lodge
+        </a>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+  <div id="services" class="container">
+    <h1>Reservation Form</h1>
+    <form id="reservation-form">
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" required>
+      </div>
+
+      <!-- Reservation Details -->
+      <div class="form-group">
+        <label for="rooms">Number of Rooms:</label>
+        <input type="number" id="rooms" required min="1">
+      </div>
+      <div class="form-group">
+        <label for="nights">Length of Stay (Nights):</label>
+        <input type="number" id="nights" required min="1">
+      </div>
+      <div class="form-group">
+        <label for="adults">Number of Adults:</label>
+        <input type="number" id="adults" required min="1">
+      </div>
+      <div class="form-group">
+        <label for="children">Number of Children:</label>
+        <input type="number" id="children" required min="0">
+      </div>
+
+      <!-- Sports Activities -->
+      <h3>Sports Activities</h3>
+      <div class="activities">
+        <div class="activity">
+          <img src="images/golf.jpg" alt="Golf">
+          <label>
+            <input type="checkbox" value="9" class="activity-checkbox"> Golf ($9)
+          </label>
+        </div>
+        <div class="activity">
+          <img src="images/fish.jpg" alt="Fishing">
+          <label>
+            <input type="checkbox" value="5" class="activity-checkbox"> Fishing ($5)
+          </label>
+        </div>
+        <div class="activity">
+          <img src="images/car.jpg" alt="Car Racing">
+          <label>
+            <input type="checkbox" value="3" class="activity-checkbox"> Car Racing ($3)
+          </label>
+        </div>
+        <div class="activity">
+          <img src="images/horse (1).jpg" alt="Horse Riding">
+          <label>
+            <input type="checkbox" value="2" class="activity-checkbox"> Horse Riding ($2)
+          </label>
+        </div>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="form-group">
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="cash">Cash</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="calculateCharges()">Calculate Total</button>
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+        <p>Follow us on:</p>
+        <div class="social-icons">
+          <a href="mailto:chirokototanaka@811gmail.com" class="fa fa-envelope" aria-label="Email"></a>
+
+          <a href="https://facebook.com/tanaka.chirokoto" class="fa fa-facebook" aria-label="Facebook" target="_blank"></a>
+          <a href="https://twitter.com/tanaka.chirokoto" class="fa fa-twitter" aria-label="Twitter" target="_blank"></a>
+          <a href="https://instagram.com/tanaka.chirokoto" class="fa fa-instagram" aria-label="Instagram" target="_blank"></a>
+          <a href="https://linkedin.com/in/tanaka chirokoto" class="fa fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+        </div>
+      <p>&copy; 2025 Teekay Restaurant@@& Tanaka. All rights reserved.</p>
+  </div>
+        <p>&copy Tanaka; 2025 Teekay Restaurant . All rights reserved.</p>
+    </div>
+</footer>
+
+
+  <script>
+    function calculateCharges() {
+      const roomChargePerNight = 355;
+      const resortFeePerRoomPerNight = 12.50;
+      const salesTaxRate = 0.1025;
+
+      const rooms = parseInt(document.getElementById('rooms').value);
+      const nights = parseInt(document.getElementById('nights').value);
+      const activities = document.querySelectorAll('.activity-checkbox:checked');
+      let activityCost = 0;
+
+      activities.forEach(activity => {
+        activityCost += parseFloat(activity.value);
+      });
+
+      const roomCharge = rooms * nights * roomChargePerNight;
+      const resortFee = rooms * nights * resortFeePerRoomPerNight;
+      const salesTax = (roomCharge + resortFee) * salesTaxRate;
+      const totalCost = roomCharge + resortFee + salesTax + activityCost;
+
+      alert(`Total Cost:\nRoom Charge: $${roomCharge.toFixed(2)}\nResort Fee: $${resortFee.toFixed(2)}\nSales Tax: $${salesTax.toFixed(2)}\nActivity Cost: $${activityCost.toFixed(2)}\nGrand Total: $${totalCost.toFixed(2)}`);
+    }
+
+    document.getElementById('reservation-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert("Your reservation and contact details have been submitted successfully!");
+    });
+  </script>
+</body>
+</html>
+
